@@ -28,8 +28,8 @@
   </div>
 
 {% if object_list.exists %}
-{% for p in object_list %}
 <div class="row-auto">
+    {% for p in object_list %}
     <div class="col-md-6">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
@@ -62,8 +62,8 @@
             </div>
         </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
 {% else %}
 <h3>아직 찜한 책이 없습니다.</h3>
 {% endif %}
