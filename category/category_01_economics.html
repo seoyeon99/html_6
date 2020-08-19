@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title> blog </title>
+    <title>SWUBOOK-category</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.css' %}" media="screen">
-    <link rel="stylesheet" href="{% static 'blog/_assets/css/custom.min.css' %}">
+    <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
 </head>
+
 <body>
 
 <!-- Navigation -->
@@ -21,23 +21,24 @@
 
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
+            
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">경영&middot;경제</a>
+                <a class="nav-link" href="category_01_economics.html">경영&middot;경제</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">여성</a>
+                <a class="nav-link" href="category_02_women.html">여성</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">예술</a>
+                <a class="nav-link" href="category_03_art.html">예술</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">인문&middot;사회</a>
+                <a class="nav-link" href="category_04_humanities.html">인문&middot;사회</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">자연과학</a>
+                <a class="nav-link" href="category_05_science.html">자연과학</a>
             </li>
 
         </ul>
@@ -296,11 +297,12 @@
 
     </div>
 
+
+
 <script src="{% static 'blog/_assets/js/jquery.min.js' %}"></script>
 <script src="{% static 'blog/_assets/js/popper.min.js' %}"></script>
 <script src="{% static 'blog/bootstrap/bootstrap.min.js' %}"></script>
 <script src="{% static 'blog/_assets/js/custom.js' %}"></script>
-
 </body>
 
 </html>
