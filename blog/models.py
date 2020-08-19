@@ -6,7 +6,7 @@ class Post(models.Model):
     title = models.CharField(max_length=30)
     content = models.TextField()
 
-    head_image = models.ImageField(upload_to='blod/', blank=True)
+    head_image = models.ImageField(upload_to='blog/', blank=True)
 
     created = models.DateTimeField()
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
