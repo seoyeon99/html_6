@@ -17,10 +17,18 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls import url, include
+from blog.views import *
 
 urlpatterns = [
     path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
+    url(r'^category_02_women/', category_02_women, name='category_02_women'),
+    url(r'^category_01_economics/', category_01_economics, name='category_01_economics'),
+    url(r'^category_03_art/', category_03_art, name='category_03_art'),
+    url(r'^category_04_humanities/', category_04_humanities, name='category_04_humanities'),
+    url(r'^category_05_science/', category_05_science, name='category_05_science'),
+    url(r'^main/', main, name='main'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

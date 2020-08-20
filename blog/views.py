@@ -15,6 +15,28 @@ class PostList(ListView):
         return context
 
 
+def category_02_women(request):
+    return render(request, 'category_02_women.html')
+
+def category_01_economics(request):
+    return render(request, 'category_01_economics.html')
+
+def category_03_art(request):
+    return render(request, 'category_03_art.html')
+
+def category_04_humanities(request):
+    return render(request, 'category_04_humanities.html')
+
+def category_05_science(request):
+    return render(request, 'category_05_science.html')
+
+def main(request):
+    return render(request, 'main.html')
+
+def base(request):
+    return render(request, 'base.html')
+
+
 class PostUpdate(UpdateView):
     model = Post
     fields = [

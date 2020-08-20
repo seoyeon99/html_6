@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title> blog </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'blog/_assets/css/custom.min.css' %}">
+</head>
+<body>
+
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="{% url 'main' %}"><img src="{% static 'title400.png' %}" width="200" height="41"></a>
+      </div>
+
+      <div class="col-4 d-flex justify-content-end align-items-center" id="google_search_box_47605754">
+        <form id="form_google_47605754" class="form-inline my-2 my-lg-0" target="_blank" action="https://www.google.com/search">
+          <input type="hidden" name="gws_rd" value="ssl"><input type="hidden" name="tbm" value="bks">
+          <input name="q" id="searchText47605754" class="form-control s-lg-google-search-field" type="text" value="" />
+          <input id="btn_patent_search47605754"
+                 class="btn btn-danger" type="submit" value="Search" />
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 text-muted" href="{% url 'main' %}">HOME<span class="sr-only">(current)</span></a>
+      <a class="p-2 text-muted" href="{% url 'category_01_economics' %}">경영&middot;경제</a>
+      <a class="p-2 text-muted" href="{% url 'category_02_women' %}">여성</a>
+      <a class="p-2 text-muted" href="{% url 'category_03_art' %}">예술</a>
+      <a class="p-2 text-muted" href="{% url 'category_04_humanities' %}">인문&middot;사회</a>
+      <a class="p-2 text-muted" href="{% url 'category_05_science' %}">자연과학</a>
+<!--      <a class="p-2 text-muted" href="{% url 'blog' %}">마이페이지</a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+<!--      <a class="p-2 text-muted" href="#"></a>-->
+    </nav>
+  </div>
+  <hr>
+
+
+
+
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+
+<script src="{% static 'blog/_assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'blog/_assets/js/popper.min.js' %}"></script>
+<script src="{% static 'blog/bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'blog/_assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>
