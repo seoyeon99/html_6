@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> blog </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'blog/_assets/css/custom.min.css' %}">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">SWUBOOK</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'category_01_economics' %}">경영&middot;경제</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'category_02_women' %}">여성</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'category_03_art' %}">예술</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'category_04_humanities' %}">인문&middot;사회</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'category_05_science' %}">자연과학</a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+<!-- Page Content -->
+<div class="container">
+
+<h1>SWUBOOK CURATION</h1>
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+      <h2 class="display-3">경영&middot;경제</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+      <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+    </header>
+
+
+    <!-- book post -->
+    <div class="album py-5 bg-light">
+
+        <!-- Sub-Topic -->
+        <div id="s-lg-content-47605756" class="  clearfix">
+            <p><span style="font-size:28px;"><strong><span style="font-family: NanumGothic, 나눔고딕, ngwoff, ngeot; font-weight: bold;">리더십이 필요한 당신에게</span></strong></span></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/24082/63/cover500/k562639133_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000901782?mainLink=/search/tot&briefLink=/search/tot/result?q=%EB%8B%A4%EC%8B%9C+%EB%A6%AC%EB%8D%94%EB%A5%BC+%EC%83%9D%EA%B0%81%ED%95%98%EB%8B%A4_A_websysdiv=tot_A_st=KWRD_A_y=0_A_x=0_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#다시_리더를_생각하다, #존_맥스웰, #비즈니스북스, #리더십, #결단, #조직관리 </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000901782?mainLink=/search/tot&briefLink=/search/tot/result?q=%EB%8B%A4%EC%8B%9C+%EB%A6%AC%EB%8D%94%EB%A5%BC+%EC%83%9D%EA%B0%81%ED%95%98%EB%8B%A4_A_websysdiv=tot_A_st=KWRD_A_y=0_A_x=0_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/22018/96/cover500/8901238748_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000896933?mainLink=/search/tot&briefLink=/search/tot/result?q=%EB%A6%AC%EB%8D%94%EC%9D%98+%EC%9A%A9%EA%B8%B0_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#리더의_용기, #브레네_브라운, #갤리온, #리더십, #조직관리, #스타트업</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000896933?mainLink=/search/tot&briefLink=/search/tot/result?q=%EB%A6%AC%EB%8D%94%EC%9D%98+%EC%9A%A9%EA%B8%B0_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/21295/92/cover500/k242636386_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000881819?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%9A%94%EC%A6%98+%EA%B2%83%EB%93%A4%EA%B3%BC+%EC%98%9B%EB%82%A0+%EA%B2%83%EB%93%A4%EC%9D%98+%EC%84%B8%EB%8C%80+%EA%B3%B5%EC%A1%B4%EC%9D%98+%EA%B8%B0%EC%88%A0_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#요즘_것들과_옛날_것들의_세대_공존의_기술, #허두영, #넥서스BIZ, #세대갈등, #밀레니얼세대, #소통</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000881819?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%9A%94%EC%A6%98+%EA%B2%83%EB%93%A4%EA%B3%BC+%EC%98%9B%EB%82%A0+%EA%B2%83%EB%93%A4%EC%9D%98+%EC%84%B8%EB%8C%80+%EA%B3%B5%EC%A1%B4%EC%9D%98+%EA%B8%B0%EC%88%A0_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/17047/0/cover500/k042534785_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000866477?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%9D%B4%EC%9B%83%EC%A7%91+ceo_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#이웃집_CEO, #엘레나_보텔로/킴_파월/탈_라즈, #소소의_책, #조직관리, #CEO, #성장</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000866477?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%9D%B4%EC%9B%83%EC%A7%91+ceo_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- book post -->
+    <div class="album py-5 bg-light">
+
+        <!-- Sub-Topic -->
+        <div id="s-lg-content-47605756" class="  clearfix">
+            <p><span style="font-size:28px;"><strong><span style="font-family: NanumGothic, 나눔고딕, ngwoff, ngeot; font-weight: bold;">이 시대에 꼭 필요한 마켓팅과 세일즈</span></strong></span></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/24034/58/cover500/k382639512_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000900833?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%BD%94%EB%A1%9C%EB%82%98+%EC%9D%B4%ED%9B%84%EC%9D%98+%EC%84%B8%EA%B3%84_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#코로나_이후의_세계, #제이슨_솅커, #미디어숲, #트렌드, #경제전망, #코로나19</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000900833?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%BD%94%EB%A1%9C%EB%82%98+%EC%9D%B4%ED%9B%84%EC%9D%98+%EC%84%B8%EA%B3%84_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/24209/72/cover500/k382630067_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000901003?mainLink=/search/tot&briefLink=/search/tot/result?q=%EB%89%B4%ED%83%80%EC%9E%85%EC%9D%98+%EC%8B%9C%EB%8C%80_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#뉴타입의_시대, #야마구치_슈, #인플루엔셜, #경영전략, #철학, #트렌드</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000901003?mainLink=/search/tot&briefLink=/search/tot/result?q=%EB%89%B4%ED%83%80%EC%9E%85%EC%9D%98+%EC%8B%9C%EB%8C%80_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/18733/35/cover500/896570782x_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000897052?mainLink=/search/tot&briefLink=/search/tot/result?q=%EB%A7%88%EC%BC%80%ED%8C%85%EC%9D%B4%EB%8B%A4_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#마케팅이다, #세스_고딘, #쌤앤파커스, #진실성, #마케팅, #통찰력</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000897052?mainLink=/search/tot&briefLink=/search/tot/result?q=%EB%A7%88%EC%BC%80%ED%8C%85%EC%9D%B4%EB%8B%A4_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/23869/68/cover500/k792639581_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000901038?mainLink=/search/tot&briefLink=/search/tot/result?q=%EA%B8%B0%EB%A1%9D%EC%9D%98+%EC%93%B8%EB%AA%A8_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#기록의_쓸모, #이승희, #북스톤, #경험, #성장, #마케팅전략</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000901038?mainLink=/search/tot&briefLink=/search/tot/result?q=%EA%B8%B0%EB%A1%9D%EC%9D%98+%EC%93%B8%EB%AA%A8_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- book post -->
+    <div class="album py-5 bg-light">
+
+        <!-- Sub-Topic -->
+        <div id="s-lg-content-47605756" class="  clearfix">
+            <p><span style="font-size:28px;"><strong><span style="font-family: NanumGothic, 나눔고딕, ngwoff, ngeot; font-weight: bold;">요즘 대세는 주식과 투자</span></strong></span></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/22271/60/cover500/k982636921_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000377451?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#주식투자_무작정_따라하기, #윤재수, #길벗, #주식입문서, #입문, #가이드</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000377451?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/24129/23/cover500/k362639630_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000901866?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%9A%94%EC%A6%98+%EC%95%A0%EB%93%A4%EC%9D%84+%EC%9C%84%ED%95%9C+%EC%8A%AC%EA%B8%B0%EB%A1%9C%EC%9A%B4_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#요즘_애들을_위한_슬기로운_재태크_생활, #조혜경, #원앤원북스, #가이드, #사회초년생, #입문</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000901866?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%9A%94%EC%A6%98+%EC%95%A0%EB%93%A4%EC%9D%84+%EC%9C%84%ED%95%9C+%EC%8A%AC%EA%B8%B0%EB%A1%9C%EC%9A%B4_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/10764/4/cover500/8957821171_1.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000879295?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%A0%84%EC%84%A4%EB%A1%9C+%EB%96%A0%EB%82%98%EB%8A%94+%EC%9B%94%EA%B0%80%EC%9D%98+%EC%98%81%EC%9B%85_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#전설로_떠나는_월가의_영웅, #피터_린치/존_로스차일드, #국일증권경제연구소, #성공스토리, #글로벌기업, #CEO</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000879295?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%A0%84%EC%84%A4%EB%A1%9C+%EB%96%A0%EB%82%98%EB%8A%94+%EC%9B%94%EA%B0%80%EC%9D%98+%EC%98%81%EC%9B%85_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <a href="#" class="thumbnail">
+                        <img src="https://image.aladin.co.kr/product/1990/54/cover500/8997453068_2.jpg" width="100%" height="100%" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000794874?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%99%9C+%EC%A3%BC%EC%8B%9D%EC%9D%B8%EA%B0%80_A_st=KWRD_A_si=TOTAL'">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">#왜_주식인가?, #존_리, #이콘, #가이드, #노하우, #투자원칙</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onClick="location.href='https://lib.swu.ac.kr/search/detail/CATTOT000000794874?mainLink=/search/tot&briefLink=/search/tot/result?q=%EC%99%9C+%EC%A3%BC%EC%8B%9D%EC%9D%B8%EA%B0%80_A_st=KWRD_A_si=TOTAL'">이동</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">찜</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="{% static 'blog/_assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'blog/_assets/js/popper.min.js' %}"></script>
+<script src="{% static 'blog/bootstrap/bootstrap.min.js' %}"></script>
+<script src="{% static 'blog/_assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>
