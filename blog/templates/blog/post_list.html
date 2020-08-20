@@ -1,121 +1,69 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title> my page </title>
+{% extends 'blog/base.html' %}
+{% block content %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.css' %}" media="screen">
-    <link rel="stylesheet" href="{% static 'blog/_assets/css/custom.min.css' %}">
-</head>
-<body>
-<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">My Page</h1>
-      <p class="lead my-3">내가 찜한 책에 대해 간단한 comment를 남기실 수 있습니다.</p>
-      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">찜하러 가기</a></p>
-    </div>
-  </div>
-  <div class="pagename">
-      <h3 class="pb-4 mb font-italic border-bottom">
-          my page
-<!--          여유가 된다면 '사용자이름'의 찜 목록 등 처럼 바꾸어도 괜찮을 듯-->
-      </h3>
+<div class="pagename">
+    <h3 class="pb-4 mb font-italic border-bottom">
+        my page
+        {% if user.is_authenticated %}
+        <button class="btn btn-md btn-primary float-right" onclick="location.href='/blog/create/'">글쓰기</button>
+        {% endif %}
+    </h3>
+    <br>
+</div>
 
-      <br>
-  </div>
 
 {% if object_list.exists %}
-<div class="row-auto">
+
+<div class="row" id="post-card-{{ p.pk }}">
     {% for p in object_list %}
     <div class="col-md-6">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">카테고리</strong>
+                <strong class="d-inline-block mb-2 text-primary">{{p.created}}</strong>
                 <h3 class="mb-0">{{p.title}}</h3>
-                <div class="mb-1 text-muted">{{p.author}}</div>
-                <!--          <p class="card-text mb-auto">{{p.content}}</p>-->
-<!--                <div class="form-group">-->
-<!--                    <textarea class="form-control" id="comment" rows="2" placeholder="comment.."></textarea>-->
-<!--                </div>-->
-                <div class="card-body">
-                    <form method="post" action="/blog/"><input type="hidden" name="csrfmiddlewaretoken" value="gbQ1qFKTQO375N6TO832fC8F5MNjIz65MFWkUsmkWYPIEYM7gK2HLe9LO0OcESHU">
-                        <div class="form-group">
-                            <div id="div_id_text" class="form-group"><div class=""> <div class="markdownx"><textarea placeholder="comment.." name="text" cols="40" rows="2" class="markdownxwidget form-control markdownx-editor markdownx-editor" required id="id_text" data-markdownx-editor-resizable data-markdownx-urls-path="/markdownx/markdownify/" data-markdownx-upload-urls-path="/markdownx/upload/" data-markdownx-latency="500">
-</textarea> <div class="markdownx-preview"></div>
-                            </div> </div> </div>
-                        </div>
-                        <button type="submit" class="btn btn-outline-danger">저장</button>
-                        <button align="right" type="button" data-toggle="modal" data-target="#deletelike">찜 취소</button>
-<!--                        <img align="right"  type="button" src="../img/redh.png" alt="꽉찬하트" onclick="change2(this)" data-toggle="modal" data-target="#deletelike">-->
-                    </form>
-
-                </div>
-<!--                <span>-->
-<!--                    <img align="right"  type="button" src="../img/redh.png" alt="꽉찬하트" onclick="change2(this)" data-toggle="modal" data-target="#deletelike">-->
-<!--                    <button class="btn btn-outline-danger float left" onclick="location.href='#'" type="button">저장</button>-->
-<!--                </span>-->
+                <div class="mb-1 text-muted">by {{p.author}}</div>
+                <p class="card-text mb-auto">{{p.content}}</p>
             </div>
             <div class="col-auto d-none d-lg-block">
+                {% if p.head_image %}
+                <img class="bd-img" width="200" height="250" src="{{ p.head_image.url }}" alt="image">
+                {% else %}
                 <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                {% endif %}
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
+
+
+{% if is_paginated %}
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center mb-4">
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">&larr; Older</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class="page-link" href="#">&larr; Older</a>
+        </li>
+        {% endif %}
+
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Newer &rarr;</a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <a class="page-link" href="#">Newer &rarr;</a>
+        </li>
+        {% endif %}
+    </ul>
+    {% endif %}
+
 {% else %}
-<h3>아직 찜한 책이 없습니다.</h3>
+<h3>아직 한줄평을 남긴 책이 없습니다.</h3>
 {% endif %}
 
-<!--<div class="col-md-6">-->
-<!--    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">-->
-<!--        <div class="col p-4 d-flex flex-column position-static">-->
-<!--            <strong class="d-inline-block mb-2 text-success">카테고리</strong>-->
-<!--            <h3 class="mb-0">{{p.title}}</h3>-->
-<!--            <div class="mb-1 text-muted">{{p.author}}</div>-->
-<!--            <p class="mb-auto">입력된 comment가 없습니다.</p>-->
-<!--            <span>-->
-<!--            &lt;!&ndash; <a href="#" class="stretched-link">Comment</a> &ndash;&gt;-->
-
-<!-- <button class="btn btn-danger float left" onclick="location.href='#'" type="button">edit</button>-->
-<!--            <button class="btn btn-secondary float left" type="button">delete</button>-->
-<!--            <img align="right" onclick="location.href='#'" type="button" src="../img/grayh.png" alt="" onclick="change2(this)">-->
-<!--          </span>-->
-<!--        </div>-->
-<!--        <div class="col-auto d-none d-lg-block">-->
-<!--            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-<!--찜 취소 modal-->
-<div class="modal" id="deletelike">
-  <div class="modal-dialog" role="document" >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">찜 취소</h5>
-        <button class="close" aria-label="Close" type="button" data-dismiss="modal">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>찜 취소 시 작성했던 comment도 사라집니다.</p>
-          <p>정말 찜을 취소하시겠습니까?</p>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" type="button">찜 취소</button>
-        <button class="btn btn-secondary" type="button" data-dismiss="modal">돌아가기</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!--//찜 취소 modal-->
-<script src="{% static 'blog/_assets/js/jquery.min.js' %}"></script>
-<script src="{% static 'blog/_assets/js/popper.min.js' %}"></script>
-<script src="{% static 'blog/bootstrap/bootstrap.min.js' %}"></script>
-<script src="{% static 'blog/_assets/js/custom.js' %}"></script>
-</body>
-</html>
+{% endblock %}

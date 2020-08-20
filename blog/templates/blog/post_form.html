@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<!--{% block title %}{{ object.title }} - Blog{% endblock %}-->
+<div class="pagename">
+    <h3 class="pb-4 mb font-italic border-bottom">
+        한줄평 작성하기
+    </h3>
+    <br>
+</div>
+
+<form method="post">{% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn btn-primary float-right">Submit</button>
+
+</form>
+
+{{ form.media }}
+<br><br><br>
+{% endblock %} 
