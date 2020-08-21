@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Post
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PostList(ListView):
@@ -59,7 +60,7 @@ class PostDetail(DetailView):
         return context
 
 
-class PostCreate(CreateView):
+class PostCreate(LoginRequiredMixin, CreateView):
     model = Post
     fields = [
         'title', 'content', 'head_image',
