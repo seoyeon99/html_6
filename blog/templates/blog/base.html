@@ -10,42 +10,62 @@
     <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'blog/_assets/css/custom.min.css' %}">
 </head>
-<body>
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">SWUBOOK</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">MY PAGE <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">경영&middot;경제</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">여성</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">예술</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">인문&middot;사회</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">자연과학</a>
-        </li>
-      </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</header>
 
+<body>
+
+<div class="container">
+<header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="{% url 'main' %}"><img src="{% static 'title400.png' %}" width="200" height="41"></a>
+      </div>
+
+      <div class="col-4 d-flex justify-content-end align-items-center" id="google_search_box_47605754">
+        <form id="form_google_47605754" class="form-inline my-2 my-lg-0" target="_blank" action="https://www.google.com/search">
+          <input type="hidden" name="gws_rd" value="ssl"><input type="hidden" name="tbm" value="bks">
+          <input name="q" id="searchText47605754" class="form-control s-lg-google-search-field" type="text" value="" />
+          <input id="btn_patent_search47605754"
+                 class="btn btn-danger" type="submit" value="Search" />
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 text-muted" href="{% url 'main' %}">HOME<span class="sr-only">(current)</span></a>
+      <a class="p-2 text-muted" href="{% url 'category_01_economics' %}">경영&middot;경제</a>
+      <a class="p-2 text-muted" href="{% url 'category_02_women' %}">여성</a>
+      <a class="p-2 text-muted" href="{% url 'category_03_art' %}">예술</a>
+      <a class="p-2 text-muted" href="{% url 'category_04_humanities' %}">인문&middot;사회</a>
+      <a class="p-2 text-muted" href="{% url 'category_05_science' %}">자연과학</a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+      <a class="p-2 text-muted" href="#"></a>
+    </nav>
+  </div>
+  <hr>
 <div class="container">
 <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
@@ -55,58 +75,16 @@
     </div>
   </div>
 
-
+</div>
 <div>
     {% block content %}
     {% endblock %}
 </div>
-<!--<div class="col-md-6">-->
-<!--    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">-->
-<!--        <div class="col p-4 d-flex flex-column position-static">-->
-<!--            <strong class="d-inline-block mb-2 text-success">카테고리</strong>-->
-<!--            <h3 class="mb-0">{{p.title}}</h3>-->
-<!--            <div class="mb-1 text-muted">{{p.author}}</div>-->
-<!--            <p class="mb-auto">입력된 comment가 없습니다.</p>-->
-<!--            <span>-->
-<!--            &lt;!&ndash; <a href="#" class="stretched-link">Comment</a> &ndash;&gt;-->
 
-<!-- <button class="btn btn-danger float left" onclick="location.href='#'" type="button">edit</button>-->
-<!--            <button class="btn btn-secondary float left" type="button">delete</button>-->
-<!--            <img align="right" onclick="location.href='#'" type="button" src="../img/grayh.png" alt="" onclick="change2(this)">-->
-<!--          </span>-->
-<!--        </div>-->
-<!--        <div class="col-auto d-none d-lg-block">-->
-<!--            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-<!--&lt;!&ndash;찜 취소 modal&ndash;&gt;-->
-<!--<div class="modal" id="deletelike">-->
-<!--  <div class="modal-dialog" role="document" >-->
-<!--    <div class="modal-content">-->
-<!--      <div class="modal-header">-->
-<!--        <h5 class="modal-title">찜 취소</h5>-->
-<!--        <button class="close" aria-label="Close" type="button" data-dismiss="modal">-->
-<!--          <span aria-hidden="true">&times;</span>-->
-<!--        </button>-->
-<!--      </div>-->
-<!--      <div class="modal-body">-->
-<!--        <p>찜 취소 시 작성했던 comment도 사라집니다.</p>-->
-<!--          <p>정말 찜을 취소하시겠습니까?</p>-->
-<!--      </div>-->
-<!--      <div class="modal-footer">-->
-<!--        <button class="btn btn-primary" type="button">찜 취소</button>-->
-<!--        <button class="btn btn-secondary" type="button" data-dismiss="modal">돌아가기</button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--&lt;!&ndash;//찜 취소 modal&ndash;&gt;-->
 <script src="{% static 'blog/_assets/js/jquery.min.js' %}"></script>
 <script src="{% static 'blog/_assets/js/popper.min.js' %}"></script>
 <script src="{% static 'blog/bootstrap/bootstrap.min.js' %}"></script>
 <script src="{% static 'blog/_assets/js/custom.js' %}"></script>
 </body>
 </html>
+
