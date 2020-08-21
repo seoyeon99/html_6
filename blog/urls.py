@@ -18,5 +18,8 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.PostList.as_view()),
+    path('', TemplateView.as_view(template_name="login/index.html")),
+    path('blog/', include('blog.urls')),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls'))
 ]
