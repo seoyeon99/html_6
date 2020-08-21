@@ -19,5 +19,8 @@ class Post(models.Model):
     def __str__(self):
         return '{} :: {}'.format(self.title, self.author)
 
+    def get_absolute_url(self):
+        return '/blog/'
+
     def get_update_url(self):
         return self.get_absolute_url() + 'update/'
