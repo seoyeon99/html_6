@@ -46,11 +46,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     'allauth.socialaccount.providers.naver',
-
-
 ]
 
-ACCOUNT_EMAIL_REQURED = True
+ACCOUNT_EMAIL_REQUIRED = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -135,7 +133,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-SITE_ID=1
+SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
